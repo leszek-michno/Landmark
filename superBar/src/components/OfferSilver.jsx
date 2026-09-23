@@ -1,0 +1,45 @@
+import { useState } from "react";
+import "../assets/styles/styles.css";
+
+const OfferSilver = () => {
+  const [flipped, setFlipped] = useState(false);
+
+  const handleFlip = () => {
+    setFlipped(!flipped);
+  };
+
+  return (
+    <div
+      className="w-full h-96 xl:w-11/12 mx-auto"
+      onClick={handleFlip}
+      style={{ cursor: "pointer" }}
+    >
+      <div
+        className="inner w-full h-full"
+        style={{ transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)" }}
+      >
+        <div className="absolute w-full h-full backface-hidden flex items-center justify-center rounded-lg shadow-lg bg-stone-500 flex-col 
+              border-t-[0.02rem]
+              border-l-[0.02rem]
+              border-b-[0.02rem]
+              border-r-[0.02rem]
+              border-t-red-500
+              border-l-yellow-500
+              border-b-yellow-500
+              border-r-red-500">
+          {/* <h2 className="text-3xl backface-hidden text-amber-300 mb-2 font-serif">Oferta dla firm</h2> */}
+          <h2 className="text-2xl text-amber-200 font-serif m-2 text-center">Imprezy integracyjne, eventy, itp.</h2>
+          <h2 className="text-2xl text-amber-200 font-serif m-2 text-center">(srebrna oferta)</h2>
+          <p className="text-amber-300 font-serif mt-2">(kliknij po więcej)</p>
+        </div>
+        <div className="absolute w-full h-full bg-amber-500  text-black flex items-center justify-center rounded-lg shadow-lg rotate-y-180 backface-hidden">
+          <p className="text-sm p-4">
+            To jest tekst informacyjny na rewersie karty.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default OfferSilver;
