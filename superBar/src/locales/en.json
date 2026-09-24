@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "offer": "Offer",
+    "gallery": "Photo Gallery",
+    "contact": "Contact"
+  },
+  "hero": {
+    "about_title": "A few words about us:",
+    "p1": "Fire, rhythm and grilling together in a relaxed, late-night atmosphere. We care about great service and vibes, but here you take the tongs — because the biggest fun is grilling together.",
+    "p2": "We're not a classic restaurant. At the centre of the venue stands a large grill where our guests prepare their own steaks, cheeses, sausages and whatever they fancy. No stress, no pretence — just good vibes and food made on your own terms. In the atmospheric Kazimierz district we welcome you every night until 2:00 AM. When other places close up, the best part of the evening is just beginning here.",
+    "p3": "The Landmark Supper Club is all about good vibes, great drinks, cold beer, live concerts and events — a meeting place for those who don't like to end the night too early. Come join us by the fire. We're open EVERY DAY until 2:00 AM."
+  },
+  "sections": {
+    "menu": "Menu",
+    "offer": "Corporate Offer",
+    "gallery": "Gallery",
+    "contact": "Contact Us"
+  },
+  "offer": {
+    "gold_title": "Team building events, corporate parties, etc.",
+    "gold_tier": "(gold package)",
+    "silver_title": "Team building events, corporate parties, etc.",
+    "silver_tier": "(silver package)",
+    "bronze_title": "Team building events, corporate parties, etc.",
+    "bronze_tier": "(bronze package)",
+    "click_more": "(click for more)",
+    "back_text": "This is the informational text on the back of the card."
+  },
+  "contact": {
+    "form_title": "Write to us",
+    "name_label": "Your name",
+    "email_label": "Your e-mail address",
+    "message_label": "Your message",
+    "send_btn": "send",
+    "success_title": "Sent!",
+    "success_text": "Your message has been sent!"
+  }
+}

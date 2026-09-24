@@ -16,54 +16,6 @@ const Menu = () => {
     setCurrentIndex(null);
   };
 
-  // const nextImage = (event) => {
-  //   event?.stopPropagation();
-
-  //   setCurrentIndex((prevIndex) =>
-  //     prevIndex === ArrayMenu.length - 1 ? 0 : prevIndex + 1,
-  //   );
-  // };
-
-  // const previousImage = (event) => {
-  //   event?.stopPropagation();
-
-  //   setCurrentIndex((prevIndex) =>
-  //     prevIndex === 0 ? ArrayMenu.length - 1 : prevIndex - 1,
-  //   );
-  // };
-
-  // Obsługa klawiatury i blokada przewijania
-  // useEffect(() => {
-  //   if (currentIndex === null) return;
-
-  //   const handleKeyDown = (event) => {
-  //     if (event.key === "Escape") {
-  //       closeImage();
-  //     }
-
-  //     if (event.key === "ArrowRight") {
-  //       setCurrentIndex((prevIndex) =>
-  //         prevIndex === ArrayMenu.length - 1 ? 0 : prevIndex + 1,
-  //       );
-  //     }
-
-  //     if (event.key === "ArrowLeft") {
-  //       setCurrentIndex((prevIndex) =>
-  //         prevIndex === 0 ? ArrayMenu.length - 1 : prevIndex - 1,
-  //       );
-  //     }
-  //   };
-
-  //   document.body.style.overflow = "hidden";
-
-  //   window.addEventListener("keydown", handleKeyDown);
-
-  //   return () => {
-  //     document.body.style.overflow = "";
-  //     window.removeEventListener("keydown", handleKeyDown);
-  //   };
-  // }, [currentIndex]);
-
   return (
     <div
       className="pt-24 text-lg bg-gradient-to-r from-red-950 to-stone-950 h-full"
@@ -112,18 +64,7 @@ const Menu = () => {
               src={photo.image}
               alt={`Galeria - zdjęcie ${index + 1}`}
               loading="lazy"
-              // className="
-              //   block
-              //   w-full
-              //   h-full
-                // aspect-[4/3]
-              //   object-cover
-              //   transition-none
-              //   min-[601px]:transition-transform
-              //   min-[601px]:duration-300
-              //   min-[601px]:ease-in-out
-              //   min-[601px]:hover:scale-125
-              // "
+            
             />
           </div>
         ))}
@@ -146,69 +87,7 @@ const Menu = () => {
             // animate-[galleryFadeIn_0.2s_ease]
           "
         >
-          {/* Zamknięcie */}
-
-          {/* <button
-            type="button"
-            aria-label="Zamknij zdjęcie"
-            onClick={closeImage}
-            className="
-              absolute
-              top-5
-              right-[30px]
-              z-[2]
-              cursor-pointer
-              border-0
-              bg-transparent
-              px-2.5
-              py-[5px]
-              text-[42px]
-              font-light
-              leading-none
-              text-white
-              opacity-80
-              transition-opacity
-              duration-200
-              hover:opacity-100
-            "
-          >
-            ×
-          </button> */}
-
-          {/* Poprzednie zdjęcie */}
-
-          {/* <button
-            type="button"
-            aria-label="Poprzednie zdjęcie"
-            onClick={previousImage}
-            className="
-              absolute
-              top-1/2
-              left-[25px]
-              z-[2]
-              -translate-y-1/2
-              cursor-pointer
-              border-0
-              bg-transparent
-              p-[15px]
-              text-[60px]
-              font-extralight
-              leading-none
-              text-white
-              opacity-65
-              transition-opacity
-              duration-200
-              hover:opacity-100
-              max-[900px]:left-2.5
-              max-[900px]:p-2.5
-              max-[900px]:text-[50px]
-            "
-          >
-            ‹
-          </button> */}
-
-          {/* Powiększone zdjęcie */}
-
+      
           <img
             src={ArrayMenu[currentIndex].image}
             alt={`Galeria - zdjęcie ${currentIndex + 1}`}
@@ -227,37 +106,7 @@ const Menu = () => {
             "
           />
 
-          {/* Następne zdjęcie */}
-
-          {/* <button
-            type="button"
-            aria-label="Następne zdjęcie"
-            onClick={nextImage}
-            className="
-              absolute
-              top-1/2
-              right-[25px]
-              z-[2]
-              -translate-y-1/2
-              cursor-pointer
-              border-0
-              bg-transparent
-              p-[15px]
-              text-[60px]
-              font-extralight
-              leading-none
-              text-white
-              opacity-65
-              transition-opacity
-              duration-200
-              hover:opacity-100
-              max-[900px]:right-2.5
-              max-[900px]:p-2.5
-              max-[900px]:text-[50px]
-            "
-          >
-            ›
-          </button> */}
+          
         </div>
       )}
     </div>

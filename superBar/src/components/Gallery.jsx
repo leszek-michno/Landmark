@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { ArrayGallery } from "../assets/data/ArrayGallery";
 import SectionTitle from "./SectionTitle";
 
 const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(null);
+  const { t } = useTranslation();
 
-  // Otwieramy modal tylko na ekranach większych niż 600px
   const openImage = (index) => {
     if (window.innerWidth <= 600) return;
-
     setCurrentIndex(index);
   };
 
@@ -18,7 +18,6 @@ const Gallery = () => {
 
   const nextImage = (event) => {
     event?.stopPropagation();
-
     setCurrentIndex((prevIndex) =>
       prevIndex === ArrayGallery.length - 1 ? 0 : prevIndex + 1,
     );
@@ -26,27 +25,21 @@ const Gallery = () => {
 
   const previousImage = (event) => {
     event?.stopPropagation();
-
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? ArrayGallery.length - 1 : prevIndex - 1,
     );
   };
 
-  // Obsługa klawiatury i blokada przewijania
   useEffect(() => {
     if (currentIndex === null) return;
 
     const handleKeyDown = (event) => {
-      if (event.key === "Escape") {
-        closeImage();
-      }
-
+      if (event.key === "Escape") closeImage();
       if (event.key === "ArrowRight") {
         setCurrentIndex((prevIndex) =>
           prevIndex === ArrayGallery.length - 1 ? 0 : prevIndex + 1,
         );
       }
-
       if (event.key === "ArrowLeft") {
         setCurrentIndex((prevIndex) =>
           prevIndex === 0 ? ArrayGallery.length - 1 : prevIndex - 1,
@@ -55,7 +48,6 @@ const Gallery = () => {
     };
 
     document.body.style.overflow = "hidden";
-
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
@@ -69,9 +61,7 @@ const Gallery = () => {
       className="pt-24 pb-10 text-lg bg-gradient-to-r from-red-950 to-stone-950 w-full h-full"
       id="gallery"
     >
-        <SectionTitle text="Galeria" />
-
-      {/* GALERIA */}
+      <SectionTitle text={t("sections.gallery")} />
 
       <div
         className="
@@ -112,7 +102,7 @@ const Gallery = () => {
           >
             <img
               src={photo.image}
-              alt={`Galeria - zdjęcie ${index + 1}`}
+              alt={`${t("sections.gallery")} - ${index + 1}`}
               loading="lazy"
               className="
                 block
@@ -132,7 +122,6 @@ const Gallery = () => {
       </div>
 
       {/* MODAL / LIGHTBOX */}
-
       {currentIndex !== null && (
         <div
           onClick={closeImage}
@@ -148,114 +137,52 @@ const Gallery = () => {
             animate-[galleryFadeIn_0.2s_ease]
           "
         >
-          {/* Zamknięcie */}
-
           <button
             type="button"
             aria-label="Zamknij zdjęcie"
             onClick={closeImage}
             className="
-              absolute
-              top-5
-              right-[30px]
-              z-[2]
-              cursor-pointer
-              border-0
-              bg-transparent
-              px-2.5
-              py-[5px]
-              text-[42px]
-              font-light
-              leading-none
-              text-white
-              opacity-80
-              transition-opacity
-              duration-200
-              hover:opacity-100
+              absolute top-5 right-[30px] z-[2] cursor-pointer border-0
+              bg-transparent px-2.5 py-[5px] text-[42px] font-light
+              leading-none text-white opacity-80 transition-opacity duration-200 hover:opacity-100
             "
           >
             ×
           </button>
-
-          {/* Poprzednie zdjęcie */}
 
           <button
             type="button"
             aria-label="Poprzednie zdjęcie"
             onClick={previousImage}
             className="
-              absolute
-              top-1/2
-              left-[25px]
-              z-[2]
-              -translate-y-1/2
-              cursor-pointer
-              border-0
-              bg-transparent
-              p-[15px]
-              text-[60px]
-              font-extralight
-              leading-none
-              text-white
-              opacity-65
-              transition-opacity
-              duration-200
-              hover:opacity-100
-              max-[900px]:left-2.5
-              max-[900px]:p-2.5
-              max-[900px]:text-[50px]
+              absolute top-1/2 left-[25px] z-[2] -translate-y-1/2 cursor-pointer
+              border-0 bg-transparent p-[15px] text-[60px] font-extralight
+              leading-none text-white opacity-65 transition-opacity duration-200
+              hover:opacity-100 max-[900px]:left-2.5 max-[900px]:p-2.5 max-[900px]:text-[50px]
             "
           >
             ‹
           </button>
 
-          {/* Powiększone zdjęcie */}
-
           <img
             src={ArrayGallery[currentIndex].image}
-            alt={`Galeria - zdjęcie ${currentIndex + 1}`}
+            alt={`${t("sections.gallery")} - ${currentIndex + 1}`}
             onClick={(event) => event.stopPropagation()}
             className="
-              block
-              h-auto
-              w-auto
-              max-w-[90vw]
-              max-h-[90vh]
-              rounded
-              object-contain
-              animate-[galleryImageIn_0.25s_ease]
-              max-[900px]:max-w-[82vw]
-              max-[900px]:max-h-[80vh]
+              block h-auto w-auto max-w-[90vw] max-h-[90vh] rounded object-contain
+              animate-[galleryImageIn_0.25s_ease] max-[900px]:max-w-[82vw] max-[900px]:max-h-[80vh]
             "
           />
-
-          {/* Następne zdjęcie */}
 
           <button
             type="button"
             aria-label="Następne zdjęcie"
             onClick={nextImage}
             className="
-              absolute
-              top-1/2
-              right-[25px]
-              z-[2]
-              -translate-y-1/2
-              cursor-pointer
-              border-0
-              bg-transparent
-              p-[15px]
-              text-[60px]
-              font-extralight
-              leading-none
-              text-white
-              opacity-65
-              transition-opacity
-              duration-200
-              hover:opacity-100
-              max-[900px]:right-2.5
-              max-[900px]:p-2.5
-              max-[900px]:text-[50px]
+              absolute top-1/2 right-[25px] z-[2] -translate-y-1/2 cursor-pointer
+              border-0 bg-transparent p-[15px] text-[60px] font-extralight
+              leading-none text-white opacity-65 transition-opacity duration-200
+              hover:opacity-100 max-[900px]:right-2.5 max-[900px]:p-2.5 max-[900px]:text-[50px]
             "
           >
             ›

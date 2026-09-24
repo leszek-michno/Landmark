@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "home": "Start",
+    "menu": "Menu",
+    "offer": "Oferta",
+    "gallery": "Galeria zdjęć",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "about_title": "Parę słów o nas:",
+    "p1": "Ogień, rytm i wspólne grillowanie w luźnej, nocnej atmosferze. Dbamy o świetny serwis i klimat, ale tutaj to Ty przejmujesz szczypce — bo największą frajdą jest grillowanie razem.",
+    "p2": "Nie jesteśmy klasyczną restauracją. W centrum lokalu stoi duży grill, przy którym nasi goście sami przygotowują steki, sery, kiełbaski i to, na co akurat mają ochotę. Bez spiny, bez zadęcia — po prostu dobry vibe i jedzenie robione na własnych zasadach. Na klimatycznym Kazimierzu czekamy na Was codziennie aż do 2:00 w nocy. Gdy inne miejsca zwijają rolety, u nas dopiero zaczyna się najlepsza część wieczoru.",
+    "p3": "The Landmark Supper Club to luz, dobre drinki, zimne piwo, koncerty i wydarzenia na żywo — miejsce spotkań dla tych, którzy nie lubią kończyć nocy za wcześnie. Wpadajcie na ogień. Jesteśmy otwarci CODZIENNIE do 2:00"
+  },
+  "sections": {
+    "menu": "Menu",
+    "offer": "Oferta dla firm",
+    "gallery": "Galeria",
+    "contact": "Kontakt z nami"
+  },
+  "offer": {
+    "gold_title": "Imprezy integracyjne, eventy, itp.",
+    "gold_tier": "(złota oferta)",
+    "silver_title": "Imprezy integracyjne, eventy, itp.",
+    "silver_tier": "(srebrna oferta)",
+    "bronze_title": "Imprezy integracyjne, eventy,  itp.",
+    "bronze_tier": "(brązowa oferta)",
+    "click_more": "(kliknij po więcej)",
+    "back_text": "To jest tekst informacyjny na rewersie karty."
+  },
+  "contact": {
+    "form_title": "Napisz do nas",
+    "name_label": "Twoje imię",
+    "email_label": "Twój e-mail adres",
+    "message_label": "Twoja wiadomość",
+    "send_btn": "wyślij",
+    "success_title": "Poszło!",
+    "success_text": "Twoja wiadomość została wysłana!"
+  }
+}

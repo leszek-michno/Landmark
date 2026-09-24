@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "../assets/styles/styles.css";
 
 const OfferSilver = () => {
   const [flipped, setFlipped] = useState(false);
+  const { t } = useTranslation();
 
   const handleFlip = () => {
     setFlipped(!flipped);
@@ -27,15 +29,18 @@ const OfferSilver = () => {
               border-l-yellow-500
               border-b-yellow-500
               border-r-red-500">
-          {/* <h2 className="text-3xl backface-hidden text-amber-300 mb-2 font-serif">Oferta dla firm</h2> */}
-          <h2 className="text-2xl text-amber-200 font-serif m-2 text-center">Imprezy integracyjne, eventy, itp.</h2>
-          <h2 className="text-2xl text-amber-200 font-serif m-2 text-center">(srebrna oferta)</h2>
-          <p className="text-amber-300 font-serif mt-2">(kliknij po więcej)</p>
-        </div>
-        <div className="absolute w-full h-full bg-amber-500  text-black flex items-center justify-center rounded-lg shadow-lg rotate-y-180 backface-hidden">
-          <p className="text-sm p-4">
-            To jest tekst informacyjny na rewersie karty.
+          <h2 className="text-2xl text-amber-200 font-serif m-2 text-center">
+            {t("offer.silver_title")}
+          </h2>
+          <h2 className="text-2xl text-amber-200 font-serif m-2 text-center">
+            {t("offer.silver_tier")}
+          </h2>
+          <p className="text-amber-300 font-serif mt-2">
+            {t("offer.click_more")}
           </p>
+        </div>
+        <div className="absolute w-full h-full bg-amber-500 text-black flex items-center justify-center rounded-lg shadow-lg rotate-y-180 backface-hidden">
+          <p className="text-sm p-4">{t("offer.back_text")}</p>
         </div>
       </div>
     </div>
