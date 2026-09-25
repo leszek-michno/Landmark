@@ -12,13 +12,15 @@ function App() {
 
   return (
     <div id='home'>
-     <Nav />
+    <Nav />
+    <main>
     <MainPage />
     <Menu />
-    <Offer /> 
     <Gallery />
+    <Offer /> 
     <Contact/>
     <Footer />
+    </main>
     </div>
   )
 }

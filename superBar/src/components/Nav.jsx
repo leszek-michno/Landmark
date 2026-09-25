@@ -9,8 +9,8 @@ function Nav() {
   const links = [
     { id: 1, href: "#home",    text: t("nav.home") },
     { id: 2, href: "#menu",    text: t("nav.menu") },
-    { id: 3, href: "#offer",   text: t("nav.offer") },
-    { id: 4, href: "#gallery", text: t("nav.gallery") },
+    { id: 3, href: "#gallery", text: t("nav.gallery") },
+    { id: 4, href: "#offer",   text: t("nav.offer") },
     { id: 5, href: "#kontakt", text: t("nav.contact") },
   ];
 
@@ -29,7 +29,7 @@ function Nav() {
               <img
                 src={logo}
                 alt="Logo"
-                className="w-22 h-12 object-cover rounded-full p-2 bg-red-800 ml-1
+                className="w-18 h-10 object-cover rounded-full p-2 bg-red-800 ml-1
                 border-[0.05rem]
                 border-amber-500"
               />
@@ -37,7 +37,7 @@ function Nav() {
 
             <button
               onClick={toggleLang}
-              className="text-sm font-bold px-3 py-1 rounded-full
+              className="text-sm font-bold px-4 py-2 rounded-full
                          border border-amber-500 text-amber-500
                          hover:bg-amber-500 hover:text-black
                          transition duration-300"

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import heroImg from "../assets/data/images/IMG10.jpg";
+import heroImg from "../assets/data/images/IMG10.webp";
 
 const MainPage = () => {
   const { t } = useTranslation();
@@ -39,7 +39,6 @@ const MainPage = () => {
               src={heroImg}
               alt="logo"
               className="w-full rounded-lg mx-auto"
-              loading="lazy"
             />
           </div>
         </div>

@@ -103,7 +103,6 @@ const Gallery = () => {
             <img
               src={photo.image}
               alt={`${t("sections.gallery")} - ${index + 1}`}
-              loading="lazy"
               className="
                 block
                 w-full

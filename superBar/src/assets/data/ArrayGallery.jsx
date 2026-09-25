@@ -1,12 +1,12 @@
-import Photo_1 from "./images/IMG1.jpg";
-import Photo_2 from "./images/IMG2.jpg";  
-import Photo_3 from "./images/IMG3.jpg";
-import Photo_4 from "./images/IMG4.jpg";
-// import Photo_5 from "./images/IMG5.jpg";
-import Photo_6 from "./images/IMG6.jpg";
-import Photo_7 from "./images/IMG7.jpg";
-import Photo_8 from "./images/IMG8.jpg";    
-import Photo_9 from "./images/IMG9.jpg";
+import Photo_1 from "./images/IMG1.webp";
+import Photo_2 from "./images/IMG2.webp";   
+import Photo_3 from "./images/IMG3.webp";
+import Photo_4 from "./images/IMG4.webp";
+// import Photo_5 from "./images/IMG5.webp";
+import Photo_6 from "./images/IMG6.webp";
+import Photo_7 from "./images/IMG7.webp";
+import Photo_8 from "./images/IMG8.webp";    
+import Photo_9 from "./images/IMG9.webp";
 
  export const ArrayGallery = [
     {
@@ -41,8 +41,4 @@ import Photo_9 from "./images/IMG9.jpg";
         id: 8,
         image: Photo_3,
     },
-    // {
-    //     id: 9,
-    //     image: Photo_9,
-    // },
  ]
